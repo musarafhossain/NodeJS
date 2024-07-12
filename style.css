@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --navbar-height: 8vh;
+    --slider-width: 260px;
+}
+
+/*------------------------ Style Navbar ---------------------*/
+.navbar{
+    width: 100%;
+    height: var(--navbar-height);
+    background-color: #deeaee;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    padding: 0 2%;
+    position: fixed;
+    z-index: 10;
+}
+.navbar span{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+.navbar span div{
+    height: 5px;
+    width: 30px;
+    background-color: black;
+}
+.navbar .heading{
+    width: 100%;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: 700;
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+}
+/*-------------------- End Style Navbar --------------------*/
+
+
+/*-------------------- Style Content -----------------------*/
+.content{
+    background-color: transparent;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding-top: var(--navbar-height);
+}
+/*-------------------- End Style Content --------------------*/
+
+
+/*-------------------- Style Slidebar -----------------------*/
+.content .slider-body{
+    background-color: #d5e1df;
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
+    height: 100%;
+    width: var(--slider-width);
+    position: absolute;
+    z-index: 5;
+    transform: translateX(calc(var(--slider-width)*-1));
+    transition: all 0.2s ease-in-out;
+    display: flex;
+}
+.content #toggleSlider{
+    display: none;
+}
+.content #toggleSlider:checked ~ .slider-body{
+    transform: translateX(0px);
+}
+.content .slider-body .main-slider{
+    width: 100%;
+    margin: 5% 0;
+    display: flex;
+    flex-direction: column;
+}
+.content .slider-body .main-slider a{
+    width: 100%;
+    text-decoration: none;
+    color: #000000;
+    padding: 4% 8%;
+    font-family: Roboto;
+    font-size: 1.2rem;
+}
+.content .slider-body .main-slider a:hover{
+    background-color: #b2b2b2;
+}
+.content .slider-body .main-slider a:focus{
+    background-color: #80ced6;
+}
+/*-------------------- End Style Slidebar -------------------*/
+
+
+/*---------------------- Style Overlay ----------------------*/
+.content .overlay{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 3;
+}
+.content #toggleSlider:checked ~ .overlay{
+    display: block;
+}
+/*-------------------- End Style Overlay --------------------*/
+
+
+/*-------------------- Style Main Content -------------------*/
+.content .main-content{
+    height: 100%;
+    display: flex;
+    overflow: auto;
+}
+.content .main-content .tutorial-content{
+    height: 100%;
+    width: 100%;
+    margin: 2%;
+}
+.content .main-content .tutorial-content h1{
+    text-align: center;
+    font-size: 2rem;
+    font-family: sans-serif;
+    padding: 3%;
+}
+/*------------------ End Style Main Content -----------------*/
