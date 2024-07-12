@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong|Roboto|Montserrat">
+    <link rel="icon" type="image/x-icon" href="./images/nodejs.svg">
+    <link rel="stylesheet" href="style.css">
+    <title>Node JS - Musaraf Hossain</title>
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <label for="toggleSlider">
+                <span>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </span>
+            </label>
+            <div class="heading">Node JS Tutorial</div>
+        </div>
+    </nav>
+    <section>
+        <div class="content">
+            <input type="checkbox" name="toggleSlider" id="toggleSlider">
+            <div class="slider-body">
+                <div class="main-slider">
+                    <a href="/">Introduction</a>
+                    <a href="/console.html">Node JS Console</a>
+                    <a href="#">Modules</a>
+                    <a href="#">HTTP Module</a>
+                    <a href="#">File System</a>
+                    <a href="#">URL Module</a>
+                    <a href="#">NPM</a>
+                    <a href="#">Events</a>
+                    <a href="#">Upload Files</a>
+                    <a href="#">Email</a>
+                </div>
+            </div>
+            <div class="overlay"></div>
+            <div class="main-content">
+               <div class="tutorial-content">
+                    <div class="introduction" id="introduction">
+                        <h1 class="heading">Node JS Console</h1>
+                        <div class="questions">
+                            <h2 class="question">➡️ Node.js console.log()</h2>
+                            <ul>
+                                <li>👉 The console.log() function is used to display simple message on console.
+                                    <div style="background: #eeeedd; overflow:auto;width:auto;font-size:1.1rem;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em; margin-top:10px;"><pre style="margin: 0; line-height: 125%">console.log(<span style="color: #CD5555">&#39;Hello Musaraf!&#39;</span>);</pre></div>
+                                </li>
+                                <li>👉 Output:
+                                    <div style="background: #eeeedd; overflow:auto;width:auto;font-size:1.1rem;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;margin-top:10px;"><pre style="margin: 0; line-height: 125%">Hello Musaraf!</pre></div>
+                                </li>
+                                <li>👉 We can also use format specifier in console.log() function..
+                                    <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;font-size:1.1rem;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;margin-top:10px;"><pre style="margin: 0; line-height: 125%">console.log(<span style="color: #CD5555">&#39;Hello %s&#39;</span>, <span style="color: #CD5555">&#39;Musaraf&#39;</span>);</pre></div>
+                                </li>
+                                <li>👉 Output:
+                                    <div style="background: #eeeedd; overflow:auto;width:auto;font-size:1.1rem;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;margin-top:10px;"><pre style="margin: 0; line-height: 125%">Hello Musaraf!</pre></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="questions">
+                            <h2 class="question">➡️ Node.js console.error()</h2>
+                            <ul>
+                                <li>👉 The console.error() function is used to render error message on console.
+                                    <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;font-size:1.1rem;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;margin-top:10px;"><pre style="margin: 0; line-height: 125%">console.error(<span style="color: #8B008B; font-weight: bold">new</span> <span style="color: #658b00">Error</span>(<span style="color: #CD5555">&#39;Hell! This is a wrong method.&#39;</span>));</pre></div>
+                                </li>
+                                <li>👉 Output:
+                                    <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;font-size:1.1rem;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;margin-top:10px;"><pre style="margin: 0; line-height: 125%"><span style="color: #658b00">Error</span>: Hell! This is a wrong method.
+    at <span style="color: #658b00">Object</span>.&lt;anonymous&gt; (F:<span style="color: #a61717; background-color: #e3d2d2">\</span>Node JS<span style="color: #a61717; background-color: #e3d2d2">\</span>Code<span style="color: #a61717; background-color: #e3d2d2">\</span>hello.js:<span style="color: #B452CD">1</span>:<span style="color: #B452CD">15</span>)
+    at Module._compile (node:internal/modules/cjs/loader:<span style="color: #B452CD">1358</span>:<span style="color: #B452CD">14</span>)
+    at Module._extensions..js (node:internal/modules/cjs/loader:<span style="color: #B452CD">1416</span>:<span style="color: #B452CD">10</span>)
+    at Module.load (node:internal/modules/cjs/loader:<span style="color: #B452CD">1208</span>:<span style="color: #B452CD">32</span>)
+    at Module._load (node:internal/modules/cjs/loader:<span style="color: #B452CD">1024</span>:<span style="color: #B452CD">12</span>)
+    at <span style="color: #658b00">Function</span>.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:<span style="color: #B452CD">174</span>:<span style="color: #B452CD">12</span>)
+    at node:internal/main/run_main_module:<span style="color: #B452CD">28</span>:<span style="color: #B452CD">49</span>
+</pre></div>
+
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="questions">
+                            <h2 class="question">➡️ Node.js console.warn()</h2>
+                            <ul>
+                                <li>👉 The console.warn() function is used to display warning message on console.
+                                    <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;font-size:1.1rem;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;margin-top:10px;"><pre style="margin: 0; line-height: 125%"><span style="color: #8B008B; font-weight: bold">const</span> name = <span style="color: #CD5555">&#39;John&#39;</span>;  
+console.warn(<span style="color: #CD5555">`Don&#39;t mess with me ${name}! Don&#39;t mess with me!`</span>); 
+</pre></div>
+                                </li>
+                                <li>👉 Output:
+                                    <div style="background: #eeeedd; overflow:auto;width:auto;font-size:1.1rem;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;margin-top:10px;"><pre style="margin: 0; line-height: 125%">Don't mess with me John! Don't mess with me!</pre></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <br/>
+                    </div>
+               </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

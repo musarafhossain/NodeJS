@@ -2,8 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
     scroll-behavior: smooth;
+    text-align: justify;
+}
+
+body{
+    overflow: hidden;
 }
 
 :root{
@@ -11,7 +15,7 @@
     --slider-width: 260px;
 }
 
-/*------------------------ Style Navbar ---------------------*/
+/*----------------------- Style Navbar ---------------------*/
 .navbar{
     width: 100%;
     height: var(--navbar-height);
@@ -121,12 +125,29 @@
 .content .main-content .tutorial-content{
     height: 100%;
     width: 100%;
-    margin: 2%;
+    padding: 0 5%;
 }
-.content .main-content .tutorial-content h1{
+.content .main-content .tutorial-content .heading{
     text-align: center;
     font-size: 2rem;
     font-family: sans-serif;
     padding: 3%;
+}
+.content .main-content .tutorial-content .questions{
+    margin-bottom: 20px;
+}
+.content .main-content .tutorial-content .questions .question{
+    font-family: Roboto;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.content .main-content .tutorial-content .questions ul{
+    list-style-type: none;
+}
+.content .main-content .tutorial-content .questions ul li {
+    margin-bottom: 10px;
+    color: #666;
+    font-family: Roboto;
+    font-size: 1.1rem;
 }
 /*------------------ End Style Main Content -----------------*/
